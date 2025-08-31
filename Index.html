@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Tiwari - Electronics Engineer & Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Sumit Tiwari</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
+                <li><button class="hire-btn" onclick="openHireModal()">Hire Me</button></li>
+            </ul>
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+                <a href="#skills" class="nav-link" onclick="closeMobileMenu()">Skills</a>
+                <a href="#projects" class="nav-link" onclick="closeMobileMenu()">Projects</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+                <button class="hire-btn" onclick="openHireModal(); closeMobileMenu();" style="margin-top: 1rem; width: 100%;">Hire Me</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Hello, I'm <span class="gradient-text">Sumit Tiwari</span></h1>
+                <h2 class="hero-subtitle">Innovating at the intersection of hardware and software</h2>
+                <div class="typing-text" id="typingText">
+                    Electronics Engineer<span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Electronics Engineer specializing in embedded systems, IoT solutions, and full-stack development. 
+                    Passionate about creating innovative technologies that bridge the physical and digital worlds.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-avatar animate-on-scroll">
+                <div class="avatar-container">
+                    <div class="avatar-bg"></div>
+                    <div class="avatar-circle">
+                        <div class="avatar-initials">ST</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">About Me</div>
+                <h2 class="section-title">Who I Am</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="animate-on-scroll">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Innovative Electronics Engineer & Developer</h3>
+                        <div style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">
+                            <p style="margin-bottom: 1rem;">
+                                My name is Sumit Tiwari, 
+                                I’m currently pursuing a Bachelor of Engineering in Electronics and Computer Science at Thakur College of Engineering and Technology. 
+                                I have a strong interest in both electronics and software development
+                            </p>
+                            <p style="margin-bottom: 1rem;">
+                                My expertise spans across PCB design, embedded systems programming, IoT solutions architecture, 
+                                and full-stack web development. This unique combination allows me to create complete, 
+                                end-to-end technological solutions.
+                            </p>
+                            <p style="margin-bottom: 1rem;">
+                                I've successfully designed and implemented numerous projects including smart fire alarm systems, 
+                                My technical skill set includes languages like C, Python, HTML, CSS, and JavaScript. I have hands-on experience with tools like EasyEDA, LT Spice, AutoCAD, and KiCad for PCB design.
+                                I’m also proficient in SQL and have worked on web development projects. 
+                                I’m comfortable with GitHub and collaborating on code, and I have a solid foundation in web design and development. 
+                                my ability to solve real-world problems with innovative technology.
+                            </p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                            <div>
+                                <h4 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Education</h4>
+                                <p style="opacity: 0.8;">
+                                    B.E. in Electronics and Computer Science Engineering<br/>
+                                    Thakur College of Engineering and Technology<br/>
+                                    2022 - 2026
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Experience</h4>
+                                <p style="opacity: 0.8;">
+                                    IoT Developer<br/>
+                                    Embedded Systems Developer<br/>
+                                    Full Stack Developer<br/>
+                                    UI/UX Designer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid var(--primary-orange); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Sumit Tiwari" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <h4 style="font-weight: 600; margin-bottom: 1rem;">College Location</h4>
+                        <div style="width: 100%; height: 200px; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <iframe 
+                                title="Thakur College Location"
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                style="border: 0;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.745722943928!2d72.87241691492012!3d19.20630535285456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e57647569d%3A0xc0aec329c82d3555!2sThakur%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1677901063659!5m2!1sen!2sin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">My Capabilities</div>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-grid animate-on-scroll">
+                <div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">PCB Design</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                        <div class="skill-category">Hardware</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Embedded C/C++</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                        <div class="skill-category">Programming</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Arduino/Raspberry Pi/ESP32/STM32</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                        <div class="skill-category">Platforms</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React/Node.js</span>
+                            <span class="skill-percentage">50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                        <div class="skill-category">Web Development</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">IoT Protocols</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                        <div class="skill-category">Networking</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                        <div class="skill-category">Programming</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Altium Designer</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                        <div class="skill-category">Tools</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">3D Printing</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                        <div class="skill-category">Prototyping</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-on-scroll">
+                <h3 style="font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Professional Skills</h3>
+                <div class="professional-skills">
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Problem Solving</h4>
+                        <p style="opacity: 0.8;">Analytical approach to troubleshooting complex technical issues</p>
+                    </div>
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Project Management</h4>
+                        <p style="opacity: 0.8;">Experience leading projects from concept to completion</p>
+                    </div>
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Technical Documentation</h4>
+                        <p style="opacity: 0.8;">Clear and comprehensive documentation skills</p>
+                    </div>
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Team Collaboration</h4>
+                        <p style="opacity: 0.8;">Effective communicator and team player</p>
+                    </div>
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Continuous Learning</h4>
+                        <p style="opacity: 0.8;">Committed to staying current with emerging technologies</p>
+                    </div>
+                    <div class="professional-skill">
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Innovation</h4>
+                        <p style="opacity: 0.8;">Creative approach to developing novel solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">Projects</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projects-grid animate-on-scroll">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Smart Fire Alarm System</h3>
+                            </div>
+                            <span class="project-type">IoT Project</span>
+                        </div>
+                        <p class="project-description">
+                            Designed and implemented a smart fire alarm with real-time alerts and cloud integration
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">PCB Design</span>
+                            <span class="project-tag">ESP32</span>
+                            <span class="project-tag">Cloud IoT</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Industrial Automation Controller</h3>
+                            </div>
+                            <span class="project-type">Embedded Systems</span>
+                        </div>
+                        <p class="project-description">
+                            Developed a PLC alternative using Arduino with custom control algorithms
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">PID Control</span>
+                            <span class="project-tag">HMI</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Energy Monitoring Dashboard</h3>
+                            </div>
+                            <span class="project-type">Full Stack Development</span>
+                        </div>
+                        <p class="project-description">
+                            Created a web-based dashboard for real-time energy consumption monitoring
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Wireless Sensor Network</h3>
+                            </div>
+                            <span class="project-type">Research Project</span>
+                        </div>
+                        <p class="project-description">
+                            Implemented a low-power wireless mesh network for environmental monitoring
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">LoRa</span>
+                            <span class="project-tag">Mesh Networking</span>
+                            <span class="project-tag">Low Power Design</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Resume Filtering Website</h3>
+                            </div>
+                            <span class="project-type">Software Development</span>
+                        </div>
+                        <p class="project-description">
+                            A Resume Filtering Website is an online platform designed to help recruiters, HR professionals, or hiring managers automatically screen, sort, and filter resumes submitted by job applicants. 
+                            It uses defined criteria, keywords, and possibly AI-based analysis to identify the most relevant candidates from a pool of applications. 
+                            This significantly reduces the time and effort required in the initial stages of recruitment.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">WebDevelopment</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Documentation</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Fire Alarm System</h3>
+                            </div>
+                            <span class="project-type">Life Safety / Fire Protection System</span>
+                        </div>
+                        <p class="project-description">
+                           A Fire Alarm System is a safety system designed to detect and alert occupants to the presence of smoke, heat, or fire in a building.
+                            Its primary purpose is to ensure early detection of fire and enable timely evacuation, reducing risk to life and property
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Hardware Design</span>
+                            <span class="project-tag">PCB Design & Implementation</span>
+                            <span class="project-tag">Research</span>
+                            <span class="project-tag">Documentation</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Case Study</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn-secondary">View All Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">Get In Touch</div>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid animate-on-scroll">
+                <div class="contact-info">
+                    <h3>Let's discuss your project</h3>
+                    <p>
+                        I'm currently available for freelance work, internships, and full-time positions. 
+                        If you have a project that needs my expertise or want to discuss potential opportunities, 
+                        feel free to reach out.
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:stiwari3661@gmail.com">stiwari3661@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+918898452373">+91 88984 52373</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Mumbai, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="font-weight: 600; margin-bottom: 1rem;">Connect with me</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sumit-tiwari-623b04257" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://instagram.com/sumitevolv?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Send me a message</h3>
+                    <form onsubmit="submitContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="What's this about?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" class="form-control" placeholder="Your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Me Modal -->
+    <div class="modal" id="hireModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-size: 1.5rem; font-weight: 700;">Hire Me</h3>
+                <button class="modal-close" onclick="closeHireModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form onsubmit="submitHireForm(event)">
+                <div class="form-group">
+                    <label for="recruiterName">Recruiter Name</label>
+                    <input type="text" id="recruiterName" class="form-control" placeholder="Your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" class="form-control" placeholder="Company/organization name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="gender-grid">
+                        <div class="gender-option" onclick="selectGender('Male')">Male</div>
+                        <div class="gender-option" onclick="selectGender('Female')">Female</div>
+                        <div class="gender-option" onclick="selectGender('Other')">Other</div>
+                    </div>
+                    <input type="hidden" id="selectedGender" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Contact number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hireEmail">Email</label>
+                    <input type="email" id="hireEmail" class="form-control" placeholder="Your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="projectDetails">Project Details</label>
+                    <textarea id="projectDetails" rows="4" class="form-control" placeholder="Tell me about your project requirements" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;">
+                    <i class="fas fa-send"></i>
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="gradient-text">Sumit Tiwari</h4>
+                    <p style="color: rgba(156, 163, 175, 1); margin-top: 0.5rem;">
+                        Electronics Engineer specializing in embedded systems, IoT solutions, and full-stack development.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div style="color: rgba(156, 163, 175, 1);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-envelope"></i>
+                            <span>stiwari3661@gmail.com</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 88984 52373</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mumbai, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sumit-tiwari-623b04257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sumitevolve?igsh=eDZsY2ZtYTR6eXV6&utm_source=qr" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/Sumitevolv" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sumit Tiwari. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">Designed and developed with ❤️ by Sumit Tiwari</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
