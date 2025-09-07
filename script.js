@@ -1,8 +1,10 @@
-// Global variables
+   // Global variables
         let isDarkMode = true;
         let currentTextIndex = 0;
         let currentCharIndex = 0;
         let selectedGender = '';
+        let projectsVisible = 3;
+        let deferredPrompt;
         
         const typedTexts = [
             'Electronics Engineer',
@@ -206,6 +208,78 @@
             closeHireModal();
         }
 
+        // View More Projects functionality
+        function setupViewMoreProjects() {
+            const viewMoreBtn = document.getElementById('viewMoreBtn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            // Initially show only 3 projects
+            projectCards.forEach((card, index) => {
+                if (index >= projectsVisible) {
+                    card.classList.add('hidden');
+                }
+            });
+            
+            viewMoreBtn.addEventListener('click', () => {
+                // Show 3 more projects
+                projectsVisible += 3;
+                
+                projectCards.forEach((card, index) => {
+                    if (index < projectsVisible) {
+                        card.classList.remove('hidden');
+                    }
+                });
+                
+                // Hide button if all projects are visible
+                if (projectsVisible >= projectCards.length) {
+                    viewMoreBtn.style.display = 'none';
+                }
+                
+                // Scroll to the newly revealed projects
+                const lastVisibleCard = document.querySelectorAll('.project-card:not(.hidden)');
+                if (lastVisibleCard.length > 0) {
+                    lastVisibleCard[lastVisibleCard.length - 1].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+            });
+        }
+
+        // PWA functionality
+        function setupPWA() {
+            const installBtn = document.getElementById('installBtn');
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                // Prevent the mini-infobar from appearing on mobile
+                e.preventDefault();
+                // Stash the event so it can be triggered later
+                deferredPrompt = e;
+                // Show the install button
+                installBtn.style.display = 'flex';
+            });
+            
+            installBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) return;
+                
+                // Show the install prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                const { outcome } = await deferredPrompt.userChoice;
+                // We've used the prompt, and can't use it again, discard it
+                deferredPrompt = null;
+                // Hide the install button
+                installBtn.style.display = 'none';
+            });
+            
+            window.addEventListener('appinstalled', () => {
+                // Hide the install button
+                installBtn.style.display = 'none';
+                // Clear the deferredPrompt variable
+                deferredPrompt = null;
+            });
+        }
+
         // Add click event listeners to navigation links
         document.addEventListener('DOMContentLoaded', function() {
             // Start typing animation
@@ -238,6 +312,12 @@
                     closeHireModal();
                 }
             });
+            
+            // Setup view more projects functionality
+            setupViewMoreProjects();
+            
+            // Setup PWA functionality
+            setupPWA();
             
             // Initial animations
             animateOnScroll();
@@ -390,4 +470,3 @@
         }
 
         preloadImages();
-   
